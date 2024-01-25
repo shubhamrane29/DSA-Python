@@ -18,6 +18,7 @@ class Linkedlist:
             while n is not None:
                 print(f'{n.data} ->', end = ' ')
                 n = n.ref
+            print('None')
 
     def add_begin(self, data):
         new_node = Node(data)
@@ -144,9 +145,8 @@ if __name__ == '__main__':
     ll.add_begin(36)
     ll.add_after(56, 1)
     ll.add_before(43,9)
-    #36->29->1->56->43->9
-    ll.delete_begin() #Delete 36
-    ll.delete_end() #Delete 9
-    ll.delete_node(56) #Delete 56
-    ll.print_LL()
-    #29->1->43
+    ll.print_LL() #36->29->1->56->43->9->None
+    ll.delete_begin()
+    ll.delete_end()
+    ll.delete_node(56)
+    ll.print_LL() #29->1->43->None
